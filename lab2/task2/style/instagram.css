@@ -1,0 +1,352 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    background-color: #fafafa;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-window {
+    flex: 1; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.icon-side {
+    position: fixed;
+    top: 24px;
+    left: 40px;
+    z-index: 10;
+}
+
+.icon {
+    width: 60px;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 24px;
+}
+
+.slogan {
+    max-width: 480px;
+    font-size: 32px;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.gradient {
+    display: inline-block;
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.photo {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+}
+
+.vert-line {
+    width: 1px;
+    background-color: #dbdbdb;
+    align-self: stretch;
+    margin: 0 40px;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    width: 400px;
+    padding: 24px 32px;
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 16px;
+}
+
+.enter {
+    text-align: center;
+}
+
+.enter .opt {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.logpass {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login,
+.password {
+    height: 45px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #dbdbdb;
+    padding: 0 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #fafafa;
+}
+
+.submit {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    height: 40px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: #0866ff;
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0750d1;
+}
+
+.sub-btn:disabled {
+    background-color: #b3d9ff;
+    cursor: default;
+}
+
+.fgt-pass {
+    display: block;
+    text-align: center;
+    margin-top: 4px;
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 14px;
+}
+
+.fgt-pass:hover {
+    text-decoration: underline;
+}
+
+.create {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+
+.fcb-btn,
+.newacc {
+    background-color: #ffffff;
+    border-radius: 20px;
+    height: 40px;
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.fcb-btn {
+    color: #385185;
+}
+
+.newacc {
+    border-color: #0866ff;
+    color: #0866ff;
+    font-weight: 600;
+}
+
+.new-btn {
+    margin-top: 8px;
+}
+
+.fb-logo {
+    width: 16px;
+    height: 16px;
+}
+
+.meta {
+    width: 60px;
+    margin-top: 8px;
+    align-self: center;
+}
+
+.foot {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 16px 0 32px;
+}
+
+footer {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Languages row */
+.lang ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    justify-content: center;
+    gap: 16px;
+    color: gray;
+}
+
+.lang li {
+    display: flex;
+    align-items: center;
+    padding: 10px 4px;
+}
+
+.lang a {
+    text-decoration: none;
+    color: gray;
+    font-size: 10px;
+}
+
+.lbut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ddd;
+    background-color: #f5f6f7;
+    font-size: 10px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.fthr {
+    width: 100%;
+    max-width: 600px;
+    border: none;
+    border-top: 1px solid #dadde1;
+    margin: 8px 0 12px;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.services ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    gap: 8px 16px;
+    color: gray;
+}
+
+.services a {
+    color: gray;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+@media (max-width: 900px) {
+    .icon-side {
+        position: static;
+        margin: 16px auto 0;
+        text-align: left;
+        width: 100%;
+        max-width: 1100px;
+        padding-left: 20px;
+    }
+
+    .main-window {
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px;
+    }
+
+    .left-side {
+        align-items: flex-start;
+    }
+
+    .slogan {
+        width: 100%;
+        text-align: left;
+    }
+
+    .photo {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .vert-line {
+        display: none;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .services {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-window {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .slogan {
+        font-size: 24px;
+    }
+
+    .photo {
+        max-width: 300px;
+    }
+}

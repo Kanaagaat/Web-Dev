@@ -1,0 +1,297 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;          /* main content + footer */
+    align-items: center;
+    justify-content: center;         /* center main window vertically */
+    background-color: #f2f4f7;
+}
+
+
+.main-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f4f7;
+    height: 100%;
+}
+
+.whole-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.left-side,
+.right-side {
+    flex: 1;
+    max-width: 400px;
+}
+
+
+.title {
+    color: #0866ff;;
+    font-size: 70px;
+    margin: 0 0 8px 0;
+}
+
+.slogan {
+    width: 400px;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-card {
+    background-color: white;
+    border: 2px solid aliceblue;
+    border-radius: 20px;
+    padding: 20px 24px;
+    width: 380px;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.logpas {
+    width: 100%;
+}
+
+.logpas input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.logpas input,
+#submit {
+    width: 100%;
+}
+
+#email,
+#password {
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+#submit {
+    margin: 10px 0;
+    height: 40px;
+    background-color: #0866ff;
+    border-radius: 6px;
+    color: white;
+    border: 1px solid #0866ff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.forget-pass {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 14px;
+}
+
+.forget-pass:hover {
+    text-decoration: underline;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #dadde1;
+    margin: 16px 0;
+}
+
+.newacc {
+    margin-top: 16px;
+    background-color: #42b72a;
+    border-radius: 6px;
+    width: 200px;
+    height: 50px;
+    color: white;
+    border: none;
+    font-size: 17px;
+    line-height: 48px;
+    padding: 0 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.foot {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 16px 0 32px;
+}
+
+footer {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.lang ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    justify-content: center;
+    gap: 16px;
+    color: gray;
+}
+
+.lang li {
+    display: flex;
+    align-items: center;
+    padding: 10px 4px;
+}
+
+.lang a {
+    text-decoration: none;
+    color: gray;
+    font-size: 10px;
+}
+
+.lbut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ddd;
+    background-color: #f5f6f7;
+    font-size: 10px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+
+
+.fthr {
+    width: 100%;
+    max-width: 600px;
+    border: none;
+    border-top: 1px solid #dadde1;
+    margin: 8px 0 12px;
+}
+
+
+
+.services {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+}
+
+.services ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    gap: 8px 16px;
+    color: gray;
+}
+
+.services a {
+    color: gray;
+    text-decoration: none;
+    font-size: 10px;
+}
+@media (max-width: 900px) {
+   
+
+    .main-window {
+        padding-top: 40px;
+    }
+
+    .whole-icon {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .left-side,
+    .right-side {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .slogan {
+        max-width: 90%;
+    }
+    body {
+        justify-content: flex-start;
+        padding-top: 40px;
+    }
+    .foot {
+        width: 100vw;  
+        margin-top: auto;  
+    }
+    .services {
+        width: 100%;  
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .slogan {
+        font-size: 1.2rem;
+    }
+
+    .form-card {
+        padding: 16px;
+    }
+    
+    .foot{
+        width: 100%;
+    }
+}
