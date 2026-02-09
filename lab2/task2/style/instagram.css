@@ -304,12 +304,14 @@ footer {
 
     .main-window {
         flex-direction: column;
+        justify-content: center;
         gap: 24px;
         padding: 20px;
+        margin-left: 40px;
     }
 
     .left-side {
-        align-items: flex-start;
+        align-items: center;
     }
 
     .slogan {
@@ -333,6 +335,10 @@ footer {
 
     .services {
         width: 100%;
+    }
+
+    h1.slogan{
+        text-align: center;
     }
 }
 

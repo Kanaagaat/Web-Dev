@@ -1,0 +1,50 @@
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    background-color:  #f2f4f7;;
+
+}
+
+.form-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 50px;
+    margin: 10px;
+    gap: 5px;
+}
+
+.container{
+
+    border-color: aquamarine;
+    border: 1px solid gray;
+    border-radius: 12px;
+    background-color: white;
+
+
+
+}
+
+.submit{
+    margin-top: 10px;
+    border-radius: 6px;
+    width: 100px;
+    height: 25px;
+
+    background-color: #0866ff;
+    color:white;
+    border: 1px solid;
+
+}
+
+.age-input, .name-input{
+    border-radius: 6px;
+    border: 1px solid;
+    height: 20px;
+}
+
