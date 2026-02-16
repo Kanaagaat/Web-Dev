@@ -1,0 +1,24 @@
+
+
+<div class="demo-container">
+  <div class="demo-header">
+    <h1>{{ title() }}</h1>
+    <p class="subtitle">Standalone Component with Lifecycle Hooks, Events & Two-Way Binding</p>
+  </div>
+
+  <div class="users-grid">
+    @for (user of users(); let idx = $index; track idx) {
+      <app-user-card
+        [user]="user"
+        [editable]="true"
+        (userUpdated)="onUserUpdated(idx, $event)"
+        (deleteUser)="onDeleteUser(idx)"
+      ></app-user-card>
+    } @empty {
+      <div class="empty-state">
+        <p>No users to display. All users have been deleted!</p>
+      </div>
+    }
+  </div>
+</div>
+

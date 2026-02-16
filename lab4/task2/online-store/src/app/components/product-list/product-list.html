@@ -20,16 +20,16 @@
           </div>
           
           <div class="product-price">
-            {{ product.price | number:'1.0-0' }} ₸
+            {{ product.price | number:'1.0-0' }} <span class="currency">₸</span>
           </div>
         </div>
         
         <div class="share-buttons">
           <button (click)="shareWhatsApp(product)" class="share-btn whatsapp">
-            📱 WhatsApp
+            WhatsApp
           </button>
           <button (click)="shareTelegram(product)" class="share-btn telegram">
-            ✈️ Telegram
+            Telegram
           </button>
         </div>
       </div>
