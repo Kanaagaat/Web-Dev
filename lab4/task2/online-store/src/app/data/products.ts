@@ -1,7 +1,7 @@
-// import { ProductList } from "../components/product-list/product-list";
 import { Product } from "../models/product.model";
 
 export const PRODUCTS: Product[] = [
+  // Smartphones (categoryId 1)
   {
     id: 1,
     name: "Apple iPhone 17 Pro Max 256Gb серебристый",
@@ -14,7 +14,9 @@ export const PRODUCTS: Product[] = [
       "https://images.kaspi.kz/system/avatars/avatars/145/468/150/medium_iphone17promax_2.jpg",
       "https://images.kaspi.kz/system/avatars/avatars/145/468/150/medium_iphone17promax_3.jpg"
     ],
-    link: "https://kaspi.kz/shop/p/apple-iphone-17-pro-max-256gb-serebristyi-145468150/"
+    link: "https://kaspi.kz/shop/p/apple-iphone-17-pro-max-256gb-serebristyi-145468150/",
+    likes: 0,
+    categoryId: 1,
   },
   {
     id: 2,
@@ -28,7 +30,9 @@ export const PRODUCTS: Product[] = [
       "https://images.kaspi.kz/system/avatars/avatars/145/467/625/medium_iphone17pro_orange_2.jpg",
       "https://images.kaspi.kz/system/avatars/avatars/145/467/625/medium_iphone17pro_orange_3.jpg"
     ],
-    link: "https://kaspi.kz/shop/p/apple-iphone-17-pro-256gb-oranzhevyi-145467625/"
+    link: "https://kaspi.kz/shop/p/apple-iphone-17-pro-256gb-oranzhevyi-145467625/",
+    likes: 0,
+    categoryId: 1,
   },
   {
     id: 3,
@@ -42,7 +46,9 @@ export const PRODUCTS: Product[] = [
       "https://images.kaspi.kz/system/avatars/avatars/113/137/790/medium_iphone15_black_2.jpg",
       "https://images.kaspi.kz/system/avatars/avatars/113/137/790/medium_iphone15_black_3.jpg"
     ],
-    link: "https://kaspi.kz/shop/p/apple-iphone-15-128gb-chernyi-113137790/"
+    link: "https://kaspi.kz/shop/p/apple-iphone-15-128gb-chernyi-113137790/",
+    likes: 0,
+    categoryId: 1,
   },
   {
     id: 4,
@@ -56,7 +62,9 @@ export const PRODUCTS: Product[] = [
       "https://images.kaspi.kz/system/avatars/avatars/102/298/404/medium_iphone13_black_2.jpg",
       "https://images.kaspi.kz/system/avatars/avatars/102/298/404/medium_iphone13_black_3.jpg"
     ],
-    link: "https://kaspi.kz/shop/p/apple-iphone-13-128gb-chernyi-102298404/"
+    link: "https://kaspi.kz/shop/p/apple-iphone-13-128gb-chernyi-102298404/",
+    likes: 0,
+    categoryId: 1,
   },
   {
     id: 5,
@@ -70,90 +78,149 @@ export const PRODUCTS: Product[] = [
       "https://images.kaspi.kz/system/avatars/avatars/145/468/241/medium_iphone17promax_orange_2.jpg",
       "https://images.kaspi.kz/system/avatars/avatars/145/468/241/medium_iphone17promax_orange_3.jpg"
     ],
-    link: "https://kaspi.kz/shop/p/apple-iphone-17-pro-max-256gb-oranzhevyi-145468241/"
-  },
-  {
-    id: 6,
-    name: "Apple iPhone 17 Pro 256Gb темно-синий",
-    description: "Смартфон Apple iPhone 17 Pro 256GB тёмно-синего цвета. Процессор A19 Pro, экран 6.3 дюима OLED, тройная камера 48 МП. Батарея 3400 мАч, 5G, NFC, титановый корпус.",
-    price: 736105,
-    rating: 4.7,
-    image: "https://static.shop.kz/upload/resize_cache/iblock/d1a/92w5gagygjmjqfuej6ylnt11b6nw5vys/450_450_1/192073d1.webp",
-    images: [
-      "https://images.kaspi.kz/system/avatars/avatars/145/438/959/medium_iphone17pro_darkblue.jpg",
-      "https://images.kaspi.kz/system/avatars/avatars/145/438/959/medium_iphone17pro_darkblue_2.jpg",
-      "https://images.kaspi.kz/system/avatars/avatars/145/438/959/medium_iphone17pro_darkblue_3.jpg"
-    ],
-    link: "https://kaspi.kz/shop/p/apple-iphone-17-pro-256gb-temno-sinii-145438959/"
-  },
-  {
-    id: 7,
-    name: "Samsung Galaxy A07 6 ГБ/128 ГБ черный",
-    description: "Смартфон Samsung Galaxy A07 с 6 ГБ оперативной памяти и 128 ГБ встроенной памяти. Экран 6.5 дюимов, процессор MediaTek Helio G85. Батарея 5000 мАч, двойная камера 50 МП.",
-    price: 66643,
-    rating: 4.6,
-    image: "https://resources.cdn-kaspi.kz/img/m/p/p3d/pda/61291251.jpg?format=gallery-medium",
-    images: [
-      "https://images.kaspi.kz/system/avatars/avatars/144/817/763/medium_galaxyA07.jpg",
-      "https://images.kaspi.kz/system/avatars/avatars/144/817/763/medium_galaxyA07_2.jpg",
-      "https://images.kaspi.kz/system/avatars/avatars/144/817/763/medium_galaxyA07_3.jpg"
-    ],
-    link: "https://kaspi.kz/shop/p/samsung-galaxy-a07-6-gb-128-gb-chernyi-144817763/"
+    link: "https://kaspi.kz/shop/p/apple-iphone-17-pro-max-256gb-oranzhevyi-145468241/",
+    likes: 0,
+    categoryId: 1,
   },
   {
     id: 8,
-    name: "Apple iPhone 16 128Gb черный",
-    description: "Смартфон Apple iPhone 16 128GB чёрного цвета. Процессор A18, экран 6.1 дюйма. Двойная камера 48 МП, батарея 3380 мАч. Поддержка 5G, NFC, Face ID. A18 Bionic чип.",
-    price: 446005,
+    name: "Наушники Xiaomi In-Ear Headphones Basic белый",
+    description: "Прекрасная песня – это сочетание красивых слов и звуков, которые вызывают сильные эмоции и воспоминания. Наши наушники являются проводником в мир чарующей музыки.",
+    price: 2990,
     rating: 4.6,
-    image: "https://resources.cdn-kaspi.kz/img/m/p/hf3/h65/87295470731294.png?format=gallery-medium",
-    images: [
-      "https://images.kaspi.kz/system/avatars/avatars/123/713/453/medium_iphone16_black.jpg",
-      "https://images.kaspi.kz/system/avatars/avatars/123/713/453/medium_iphone16_black_2.jpg",
-      "https://images.kaspi.kz/system/avatars/avatars/123/713/453/medium_iphone16_black_3.jpg"
-    ],
-    link: "https://kaspi.kz/shop/p/apple-iphone-16-128gb-chernyi-123713453/"
-  },
-  {
-    id: 9,
-    name: "Apple iPhone 13 128Gb белый",
-    description: "Смартфон Apple iPhone 13 128GB белого цвета. Процессор A15 Bionic, экран 6.1 дюймов OLED. Двойная камера 12 МП, батарея 3240 мАч. Поддержка 5G, NFC, Face ID.",
-    price: 319112,
-    rating: 4.6,
-    image: "https://resources.cdn-kaspi.kz/img/m/p/hc9/h90/64209083007006.jpg?format=gallery-medium",
-    images: [
-      "https://images.kaspi.kz/system/avatars/avatars/102/298/420/medium_iphone13_white.jpg",
-      "https://images.kaspi.kz/system/avatars/avatars/102/298/420/medium_iphone13_white_2.jpg",
-      "https://images.kaspi.kz/system/avatars/avatars/102/298/420/medium_iphone13_white_3.jpg"
-    ],
-    link: "https://kaspi.kz/shop/p/apple-iphone-13-128gb-belyi-102298420/"
-  },
-  {
-    id: 10,
-    name: "Apple iPhone 17 Pro 256Gb серебристый",
-    description: "Смартфон Apple iPhone 17 Pro 256GB серебристого цвета. Процессор A19 Pro, экран 6.3 дюймов OLED, тройная камера 48 МП. Батарея 3400 мАч, 5G, NFC, титановый корпус.",
-    price: 774884,
-    rating: 4.7,
-    image: "https://resources.cdn-kaspi.kz/img/m/p/pb3/p40/64168003.png?format=gallery-medium",
-    images: [
-      "https://images.kaspi.kz/system/avatars/avatars/145/467/562/medium_iphone17pro_silver.jpg",
-      "https://images.kaspi.kz/system/avatars/avatars/145/467/562/medium_iphone17pro_silver_2.jpg",
-      "https://images.kaspi.kz/system/avatars/avatars/145/467/562/medium_iphone17pro_silver_3.jpg"
-    ],
-    link: "https://kaspi.kz/shop/p/apple-iphone-17-pro-256gb-serebristyi-145467562/"
-  },
-  {
-    id: 11,
-    name: "Redmi A3x 3 ГБ/64 ГБ черный",
-    description: "Смартфон Redmi A3x с 3 ГБ оперативной памяти и 64 ГБ встроенной памяти. Экран 6.5 дюимов, процессор Snapdragon 680. Батарея 5000 мАч, двойная камера 50 МП. Android OS.",
-    price: 56900,
-    rating: 4.6,
-    image: "https://resources.cdn-kaspi.kz/img/m/p/h83/h08/86585118720030.png?format=gallery-medium",
+    image: "https://resources.cdn-kaspi.kz/img/m/p/p6c/pa2/7469533.jpg?format=gallery-medium",
     images: [
       "https://images.kaspi.kz/system/avatars/avatars/121/654/928/medium_redmia3x.jpg",
       "https://images.kaspi.kz/system/avatars/avatars/121/654/928/medium_redmia3x_2.jpg",
       "https://images.kaspi.kz/system/avatars/avatars/121/654/928/medium_redmia3x_3.jpg"
     ],
-    link: "https://kaspi.kz/shop/p/redmi-a3x-3-gb-64-gb-chernyi-121654928/"
+    link: "https://kaspi.kz/shop/p/naushniki-xiaomi-in-ear-headphones-basic-chernyi-4803686/?c=750000000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_sports_and_outdoors_sports_nutrition_brand&gclid=CjwKCAiAkvDMBhBMEiwAnUA9BULu7nB8cZK2vkAPYwRqYvp00rlIt2_lyDrTZHUOF1A0LzWyN0OIkRoCETYQAvD_BwE",
+    likes: 0,
+    categoryId: 2,
   },
-]
+  {
+    id: 9,
+    name: "Наушники HONOR Choice Headphones черный",
+    description: "Наушники HONOR CHOICE Headphones WRL ROS-ME01 — это беспроводная накладная стереогарнитура с пассивной системой шумоподавления и поддержкой Bluetooth.",
+    price: 23990,
+    rating: 4.5,
+    image: "https://resources.cdn-kaspi.kz/img/m/p/pfe/p4a/40503534.jpg?format=gallery-large",
+    images: [
+      "https://images.kaspi.kz/system/avatars/avatars/121/654/928/medium_redmia3x.jpg",
+      "https://images.kaspi.kz/system/avatars/avatars/121/654/928/medium_redmia3x_2.jpg",
+      "https://images.kaspi.kz/system/avatars/avatars/121/654/928/medium_redmia3x_3.jpg"
+    ],
+    link: "https://kaspi.kz/shop/p/naushniki-honor-choice-headphones-belyi-139165804/?c=750000000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_sports_and_outdoors_sports_nutrition_brand&gclid=CjwKCAiAkvDMBhBMEiwAnUA9BULu7nB8cZK2vkAPYwRqYvp00rlIt2_lyDrTZHUOF1A0LzWyN0OIkRoCETYQAvD_BwE",
+    likes: 0,
+    categoryId: 2,
+  },
+  {
+    id: 10,
+    name: "Наушники Sony WH-1000XM5 черный",
+    description: "Премиальные беспроводные наушники Sony WH-1000XM5 с шумоподавлением и длительным временем работы батареи.",
+    price: 159990,
+    rating: 4.8,
+    image: "https://resources.cdn-kaspi.kz/img/m/p/h9c/h23/65099684020254.jpg?format=gallery-medium",
+    images: [],
+    link: "https://kaspi.kz/shop/p/naushniki-sony-wh-1000xm5-chernyi-105259822/?c=750000000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_sports_and_outdoors_sports_nutrition_brand&gclid=CjwKCAiAkvDMBhBMEiwAnUA9BULu7nB8cZK2vkAPYwRqYvp00rlIt2_lyDrTZHUOF1A0LzWyN0OIkRoCETYQAvD_BwE",
+    likes: 0,
+    categoryId: 2,
+  },
+
+  // Laptops (categoryId 3)
+
+  {
+    id: 12,
+    name: "Ноутбук Microsoft Surface Laptop 7 X Plus 13.8 / 16 Гб / SSD 512 Гб / Win 11 / ZGM-00037",
+    description: "Ноутбук Microsoft Surface Laptop 7 X Plus 13.8 — это беспроводная накладная стереогарнитура с пассивной системой шумоподавления и поддержкой Bluetooth.",
+    price: 23990,
+    rating: 4.5,
+    image: "https://resources.cdn-kaspi.kz/img/m/p/p30/pac/51982934.jpg?format=gallery-medium",
+    images: [
+      "https://images.kaspi.kz/system/avatars/avatars/121/654/928/medium_redmia3x.jpg",
+      "https://images.kaspi.kz/system/avatars/avatars/121/654/928/medium_redmia3x_2.jpg",
+      "https://images.kaspi.kz/system/avatars/avatars/121/654/928/medium_redmia3x_3.jpg"
+    ],
+    link: "https://kaspi.kz/shop/p/microsoft-surface-laptop-7-x-plus-13-8-16-gb-ssd-512-gb-win-11-zgm-00037-142210202/?c=750000000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_sports_and_outdoors_sports_nutrition_brand&gclid=CjwKCAiAkvDMBhBMEiwAnUA9BULu7nB8cZK2vkAPYwRqYvp00rlIt2_lyDrTZHUOF1A0LzWyN0OIkRoCETYQAvD_BwE",
+    likes: 0,
+    categoryId: 3,
+  },
+  {
+    id: 13,
+    name: "Ноутбук Apple MacBook Air 13 2020 13.3 / 8 Гб / SSD 256 Гб / macOS / MGN63RU/A",
+    description: "Первый чип, разработанный специально для Mac. Поразительно, но система на чипе Apple M1 вмещает 16 миллиардов транзис­торов и объединяет центральный и графи­ческий процессоры, систему Neural Engine, контроллеры ввода-вывода и множество других компонентов. Чип Apple M1 позволяет использовать на Mac уникальные технологии и обеспечивает невероятную производи­тельность в сочетании с лучшей в отрасли энергоэффективностью. Это не просто ещё один шаг для Mac — это принципиально новый уровень возможностей.",
+    price: 439895,
+    rating: 4.7,
+    image: "https://resources.cdn-kaspi.kz/img/m/p/h06/h08/64213171568670.jpg?format=gallery-medium",
+    images: [],
+    link: "https://kaspi.kz/shop/p/apple-macbook-air-13-2020-13-3-8-gb-ssd-256-gb-macos-mgn63ru-a-101182724/?c=750000000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_sports_and_outdoors_sports_nutrition_brand&gclid=CjwKCAiAkvDMBhBMEiwAnUA9BULu7nB8cZK2vkAPYwRqYvp00rlIt2_lyDrTZHUOF1A0LzWyN0OIkRoCETYQAvD_BwE",
+    likes: 0,
+    categoryId: 3,
+  },
+  {
+    id: 14,
+    name: "Ноутбук Apple MacBook Air 13 2022 13.6 / 16 Гб / SSD 256 Гб / macOS / MC7W4RU/A",
+    description: "Представляем Apple MacBook Air 13 2022 — ультрабук, который сочетает в себе высокую производительность, изящный дизайн и долговечность. С процессором Apple M2 и 16 Гб оперативной памяти, он идеально подходит для работы и развлечений.",
+    price: 581767,
+    rating: 4.6,
+    image: "https://resources.cdn-kaspi.kz/img/m/p/p27/p41/16713243.jpg?format=gallery-medium",
+    images: [],
+    link: "https://kaspi.kz/shop/p/apple-macbook-air-13-2022-13-6-16-gb-ssd-256-gb-macos-mc7w4ru-a-132429445/?c=750000000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_sports_and_outdoors_sports_nutrition_brand&gclid=CjwKCAiAkvDMBhBMEiwAnUA9BULu7nB8cZK2vkAPYwRqYvp00rlIt2_lyDrTZHUOF1A0LzWyN0OIkRoCETYQAvD_BwE",
+    likes: 0,
+    categoryId: 3,
+  },
+  {
+    id: 15,
+    name: "Ноутбук HP Laptop 15-fc0072ci 15.6 8 Гб  SSD 512 Гб Без ОС  A19WCEA (повтор)",
+    description: "HP Laptop 15-fc0072ci — идеальный выбор для работы и учебы, который сочетает в себе высокую производительность и стильный дизайн",
+    price: 223990,
+    rating: 4.3,
+    image: "https://resources.cdn-kaspi.kz/img/m/p/p2b/pfa/12037040.jpg?format=gallery-medium",
+    images: [
+      "https://images.kaspi.kz/system/avatars/avatars/121/654/928/medium_redmia3x.jpg",
+      "https://images.kaspi.kz/system/avatars/avatars/121/654/928/medium_redmia3x_2.jpg",
+      "https://images.kaspi.kz/system/avatars/avatars/121/654/928/medium_redmia3x_3.jpg"
+    ],
+    link: "https://kaspi.kz/shop/p/hp-laptop-15-fc0072ci-15-6-8-gb-ssd-512-gb-bez-os-a19wcea-131090992/?c=750000000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_sports_and_outdoors_sports_nutrition_brand&gclid=CjwKCAiAkvDMBhBMEiwAnUA9BULu7nB8cZK2vkAPYwRqYvp00rlIt2_lyDrTZHUOF1A0LzWyN0OIkRoCETYQAvD_BwE",
+    likes: 0,
+    categoryId: 3,
+  },
+
+  // Tablets (categoryId 4)
+  {
+    id: 16,
+    name: "Планшет Apple iPad A16 11 2025 Wi-Fi 11 дюйм 6 Гб/128 Гб синий",
+    description: "Представляем iPad A16 2025 — ваш идеальный спутник для работы и развлечений! Этот планшет с 11-дюймовым экраном и мощным процессором Apple A16 обеспечит вам высокую производительность и яркие впечатления от использования.",
+    price: 199990,
+    rating: 4.5 ,
+    image: "https://resources.cdn-kaspi.kz/img/m/p/p23/p2d/37019409.png?format=gallery-medium",
+    images: [],
+    link: "https://kaspi.kz/shop/p/apple-ipad-a16-11-2025-wi-fi-11-djuim-6-gb-128-gb-sinii-138202165/?c=750000000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_sports_and_outdoors_sports_nutrition_brand&gclid=CjwKCAiAkvDMBhBMEiwAnUA9BULu7nB8cZK2vkAPYwRqYvp00rlIt2_lyDrTZHUOF1A0LzWyN0OIkRoCETYQAvD_BwE",
+    likes: 0,
+    categoryId: 4,
+  },
+  {
+    id: 17,
+    name: "Планшет Apple iPad A16 11 2025 Wi-Fi 11 дюйм 6 Гб/256 Гб серебристый",
+    description: "Представляем iPad A16 2025 — ваш идеальный спутник для работы и развлечений! Этот планшет с мощным процессором Apple A16 и емким аккумулятором обеспечит вам высокую производительность и длительное время работы.",
+    price: 278990,
+    rating: 4.3,
+    image: "https://resources.cdn-kaspi.kz/img/m/p/p4d/p3f/37019512.png?format=gallery-medium",
+    images: [],
+    link: "https://kaspi.kz/shop/p/apple-ipad-a16-11-2025-wi-fi-11-djuim-6-gb-256-gb-serebristyi-138202210/?c=750000000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_sports_and_outdoors_sports_nutrition_brand&gclid=CjwKCAiAkvDMBhBMEiwAnUA9BULu7nB8cZK2vkAPYwRqYvp00rlIt2_lyDrTZHUOF1A0LzWyN0OIkRoCETYQAvD_BwE",
+    likes: 0,
+    categoryId: 4,
+  },
+  {
+    id: 20,
+    name: "Планшет Xiaomi Redmi Pad 2 11 дюйм 4 Гб/128 Гб серый (копия)",
+    description: "Xiaomi Redmi Pad 2 — универсальный планшет для работы, учебы и развлечений, сочетающий в себе яркий дисплей, производительный процессор и долгое время автономной работы. ",
+    price: 94990,
+    rating: 4.6,
+    image: "https://resources.cdn-kaspi.kz/img/m/p/pc8/p62/81439586.jpg?format=gallery-medium",
+    images: [],
+    link: "https://kaspi.kz/shop/p/xiaomi-redmi-pad-2-11-djuim-4-gb-128-gb-seryi-140639433/?c=750000000&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_search_sports_and_outdoors_sports_nutrition_brand&gclid=CjwKCAiAkvDMBhBMEiwAnUA9BULu7nB8cZK2vkAPYwRqYvp00rlIt2_lyDrTZHUOF1A0LzWyN0OIkRoCETYQAvD_BwE",
+    likes: 0,
+    categoryId: 4,
+  },
+];
