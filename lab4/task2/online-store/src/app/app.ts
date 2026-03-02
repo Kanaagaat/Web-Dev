@@ -1,12 +1,33 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { ProductListComponent } from './components/product-list/product-list';
+import { ProductService } from './services/product.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [ProductListComponent],
+  standalone: true,
+  imports: [CommonModule, ProductListComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
-  protected readonly title = signal('online-store');
+  categories: any;
+  selectedCategory = signal<number | null>(null);
+
+  filteredProducts = computed(() => {
+    const id = this.selectedCategory();
+    return id !== null ? this.productService.getProductsByCategory(id) : [];
+  });
+
+  constructor(private productService: ProductService) {
+    this.categories = this.productService.categories;
+  }
+
+  selectCategory(id: number) {
+    this.selectedCategory.set(id);
+  }
+
+  removeProduct(id: number) {
+    this.productService.removeProduct(id);
+  }
 }

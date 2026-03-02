@@ -1,1 +1,23 @@
-<app-product-list></app-product-list>
+<div class="app-container">
+  <h1>Каталог Kaspi.kz</h1>
+
+  <nav class="categories">
+    @for (cat of categories; track cat.id) {
+      <button
+        (click)="selectCategory(cat.id)"
+        [class.active]="cat.id === selectedCategory()"
+      >{{ cat.name }}</button>
+    }
+  </nav>
+
+  <div *ngIf="selectedCategory(); else welcome">
+    <app-product-list
+      [products]="filteredProducts()"
+      (delete)="removeProduct($event)"
+    ></app-product-list>
+  </div>
+
+  <ng-template #welcome>
+    <p>Выберите категорию, чтобы увидеть товары.</p>
+  </ng-template>
+</div>
