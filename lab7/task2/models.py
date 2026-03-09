@@ -1,7 +1,9 @@
 class Product:
-    def __init__(self, product_id: int, 
+    def __init__(self, 
+                 product_id: int, 
                  product_name: str, 
-                 product_price: float, product_amount: int):
+                 product_price: float, 
+                 product_amount: int):
         self.id = product_id
         self.name = product_name
         self.price = product_price
@@ -41,6 +43,13 @@ class Cake(Product):
     def area(self):
         import math
         return math.pi * self.radius ** 2
+    
+    def consume(self):
+        if(self.amount > 0):
+            self.amount -= 1
+            print("What a taste. It is Masterpice")
+        else:
+            print("We have 0 cake (((")
 
 class Drink(Product):
     def __init__(self, 
@@ -58,10 +67,12 @@ class Drink(Product):
     def __str__(self):
         return ( super().__str__() + f"\nVolume: {self.volume_ml} ml\nCold drink: {self.is_cold}")
 
+    def consume(self):
+        if(self.amount > 0):
+            self.amount -= 1
+            print("That was good. It is Masterpice")
+        else:
+            print("We have 0 drinks (((")
 
-a = Product(1,'ASD',123,5)
-print(a)
-print('\n\n')
+        
 
-cake = Cake(1, "Chocolate Cake", 3000, 5, 20.5, True)
-print(cake)
