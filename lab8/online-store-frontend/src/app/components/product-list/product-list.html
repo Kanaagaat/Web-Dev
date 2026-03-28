@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Список товаров</h2>
+
+  <ng-container *ngIf="products?.length; else empty">
+    <div class="products-grid">
+      @for (product of products; track product.id) {
+        <app-product-item
+          [product]="product"
+          (delete)="onDelete(product.id)">
+        </app-product-item>
+      }
+    </div>
+  </ng-container>
+
+  <ng-template #empty>
+    <p>Нет товаров в этой категории.</p>
+  </ng-template>
+</div>
