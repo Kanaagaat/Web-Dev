@@ -1,39 +1,35 @@
-<div class="product-card">
-  <a [href]="product.link" target="_blank" class="product-link">
-    <img [src]="product.image" [alt]="product.name" class="product-image" />
+<div class="card">
+
+  <a [href]="product.link" target="_blank">
+    <img [src]="product.image" [alt]="product.name">
   </a>
 
-  <div class="product-info">
-    <h3 class="product-name">{{ product.name }}</h3>
-    <p class="product-description">{{ product.description }}</p>
+  <h3>{{ product.name }}</h3>
 
-    <div class="product-rating">
-      @for (star of getStars(product.rating); track $index) {
-        <span class="star filled">★</span>
-      }
-      <span class="rating-text">{{ product.rating }}</span>
-    </div>
+  <p class="description">
+    {{ product.description }}
+  </p>
 
-    <div class="product-price">
-      {{ product.price | number:'1.0-0' }} <span class="currency">₸</span>
-    </div>
-
-    <div class="product-likes">
-      ❤ {{ product.likes }}
-    </div>
+  <div class="rating">
+    ⭐ {{ product.rating }}
   </div>
 
-  <div class="card-buttons">
-    <button (click)="onLike()" class="like-btn">Like</button>
-    <button (click)="onDelete()" class="delete-btn">Delete</button>
+  <div class="price">
+    {{ product.price | number }} ₸
   </div>
 
-  <div class="share-buttons">
-    <button (click)="shareWhatsApp()" class="share-btn whatsapp">
-      WhatsApp
-    </button>
-    <button (click)="shareTelegram()" class="share-btn telegram">
-      Telegram
-    </button>
+  <div class="likes">
+    ❤ {{ product.likes }}
   </div>
+
+  <div class="buttons">
+    <button class="like-btn" (click)="like()">Like</button>
+    <button class="delete-btn" (click)="remove()">Delete</button>
+  </div>
+
+  <div class="share">
+    <button class="wa" (click)="shareWhatsApp()">WhatsApp</button>
+    <button class="tg" (click)="shareTelegram()">Telegram</button>
+  </div>
+
 </div>

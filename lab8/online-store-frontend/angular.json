@@ -2,12 +2,11 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm",
-    "analytics": "d23cb39c-bdfe-4db1-a5c1-82139401a9ec"
+    "packageManager": "npm"
   },
   "newProjectRoot": "projects",
   "projects": {
-    "online-store": {
+    "kaspi": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -62,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "online-store:build:production"
+              "buildTarget": "kaspi:build:production"
             },
             "development": {
-              "buildTarget": "online-store:build:development"
+              "buildTarget": "kaspi:build:development"
             }
           },
           "defaultConfiguration": "development"

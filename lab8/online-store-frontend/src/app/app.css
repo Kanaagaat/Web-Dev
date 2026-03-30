@@ -1,26 +1,30 @@
-.app-container {
-  padding: 20px;
-  font-family: "Roboto",Helvetica,Arial,sans-serif;
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 20px;
 }
 
 .categories {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
 .categories button {
-  padding: 10px 20px;
-  border: 1px solid #ccc;
-  background: #f5f5f5;
+  padding: 10px 18px;
   border-radius: 8px;
+  border: none;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  background: #ddd;
+  font-weight: 500;
 }
 
-.categories button.active,
-.categories button:hover {
-  background: #007bff;
+.categories button.active {
+  background: #1976d2;
   color: white;
 }

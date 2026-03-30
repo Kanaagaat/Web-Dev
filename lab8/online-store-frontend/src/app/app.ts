@@ -1,37 +1,28 @@
-import { Component, signal, computed } from '@angular/core';
-import { ProductListComponent } from './components/product-list/product-list';
-import { ProductService } from './services/product.service';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-
-
-
+import { ProductService } from './services/product.service';
+import { ProductListComponent } from './components/product-list/product-list';
+import { Category } from './models/category.model';
+import { Product } from './models/product.model';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, ProductListComponent],
-  templateUrl: './app.html',
-  styleUrls: ['./app.css']
+  templateUrl: './app.html'
 })
-export class App {
-  categories: any;
-  selectedCategory = signal<number | null>(null);
+export class AppComponent {
 
-  filteredProducts = computed(() => {
-    const id = this.selectedCategory();
-    return id !== null ? this.productService.getProductsByCategory(id) : [];
-  });
+  categories: Category[] = [];
+  selectedCategoryId: number | null = null;
+  products: Product[] = [];
 
   constructor(private productService: ProductService) {
-    this.categories = this.productService.categories;
+    this.categories = this.productService.getCategories();
   }
 
   selectCategory(id: number) {
-    this.selectedCategory.set(id);
-  }
-
-  removeProduct(id: number) {
-    this.productService.removeProduct(id);
+    this.selectedCategoryId = id;
+    this.products = this.productService.getProductsByCategory(id);
   }
 }
