@@ -1,0 +1,12 @@
+@if (products.length === 0) {
+  <p class="empty">Нет товаров в этой категории</p>
+}
+
+<div class="grid">
+  @for (product of products; track product.id) {
+    <app-product-item
+      [product]="product"
+      (delete)="removeProduct($event)">
+    </app-product-item>
+  }
+</div>

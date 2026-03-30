@@ -1,0 +1,17 @@
+<h1>Каталог товаров Kaspi.kz</h1>
+
+<div class="categories">
+  @for (category of categories; track category.id) {
+    <button
+      (click)="selectCategory(category.id)"
+      [class.active]="selectedCategoryId === category.id">
+      {{ category.name }}
+    </button>
+  }
+</div>
+
+@if (selectedCategoryId) {
+  <app-product-list [products]="products"></app-product-list>
+} @else {
+  <p>Выберите категорию</p>
+}
